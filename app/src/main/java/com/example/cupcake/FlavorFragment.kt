@@ -60,6 +60,8 @@ class FlavorFragment : Fragment() {
         //mengikat viewModel dengan sharedViewModel
         binding?.apply {
             viewModel = sharedViewModel
+            //siklus proses agar data dapat diamati
+            lifecycleOwner = viewLifecycleOwner
         }
     }
 
