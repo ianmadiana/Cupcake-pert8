@@ -14,19 +14,19 @@ class OrderViewModel : ViewModel() {
 
     //gunakan "_" pada nama variabel untuk properti private
     //data untuk quantity
-    private val _quantity = MutableLiveData<Int>(0)
+    private val _quantity = MutableLiveData<Int>()
     val quantity: LiveData<Int> = _quantity
 
     //data untuk flavor
-    private val _flavor = MutableLiveData<String>("")
+    private val _flavor = MutableLiveData<String>()
     val flavor: LiveData<String> = _flavor
 
     //data untuk date
-    private val _date = MutableLiveData<String>("")
+    private val _date = MutableLiveData<String>()
     val date: LiveData<String> = _date
 
     //data untuk price
-    private val _price = MutableLiveData<Double>(0.0)
+    private val _price = MutableLiveData<Double>()
     val price: LiveData<Double> = _price
 
     //method untuk quantity
@@ -64,6 +64,19 @@ class OrderViewModel : ViewModel() {
         }
 
         return options
+    }
+
+    //fungsi untuk mereset properti atau item cupcake
+    fun resetOrder() {
+        _quantity.value = 0
+        _flavor.value = ""
+        _date.value = dateOptions[0]
+        _price.value = 0.0
+    }
+
+    //digunakan untuk melakukan inisialisasi properti saat instance OrderViewModel dibuat
+    init {
+        resetOrder()
     }
 
 }

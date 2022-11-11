@@ -53,13 +53,15 @@
                     android:textAllCaps="true"
                     android:textStyle="normal" />
 
+<!--                Menampilkan ringkasan quantity pesanan cupcake-->
                 <TextView
                     android:id="@+id/quantity"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
-                    tools:text="6 cupcakes" />
+                    tools:text="6 cupcakes"
+                    android:text="@{viewModel.quantity.toString()}" />
 
                 <View
                     android:id="@+id/divider1"
@@ -75,14 +77,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/flavor" />
-
+                <!--Menampilkan ringkasan flavor pesanan cupcake-->
                 <TextView
                     android:id="@+id/flavor"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
-                    tools:text="Chocolate" />
+                    tools:text="Chocolate"
+                    android:text="@{viewModel.flavor}" />
 
                 <View
                     android:id="@+id/divider2"
@@ -99,13 +102,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pickup_date" />
 
+                <!--Menampilkan ringkasan date pesanan cupcake-->
                 <TextView
                     android:id="@+id/date"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
-                    tools:text="Sunday" />
+                    tools:text="Sunday"
+                    android:text="@{viewModel.date}" />
 
                 <View
                     android:id="@+id/divider3"
