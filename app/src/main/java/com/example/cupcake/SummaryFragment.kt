@@ -60,6 +60,8 @@ class SummaryFragment : Fragment() {
             viewModel = sharedViewModel
             //siklus proses agar data dapat diamati
             lifecycleOwner = viewLifecycleOwner
+            //blok kode di bawah berhubungan dengan layout pada onClick
+            summaryFragment = this@SummaryFragment
         }
     }
 

@@ -60,6 +60,8 @@ class PickupFragment : Fragment() {
             viewModel = sharedViewModel
             //siklus proses agar data dapat diamati
             lifecycleOwner = viewLifecycleOwner
+            //blok kode di bawah berhubungan dengan layout pada onClick
+            pickupFragment = this@PickupFragment
         }
     }
 

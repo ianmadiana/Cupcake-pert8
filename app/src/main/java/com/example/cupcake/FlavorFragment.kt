@@ -59,9 +59,13 @@ class FlavorFragment : Fragment() {
 
         //mengikat viewModel dengan sharedViewModel
         binding?.apply {
-            viewModel = sharedViewModel
             //siklus proses agar data dapat diamati
             lifecycleOwner = viewLifecycleOwner
+            viewModel = sharedViewModel
+            //blok kode di bawah berhubungan dengan layout pada onClick
+            flavorFragment = this@FlavorFragment
+
+
         }
     }
 
