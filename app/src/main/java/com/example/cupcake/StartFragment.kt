@@ -70,6 +70,11 @@ class StartFragment : Fragment() {
         if (sharedViewModel.hasNoFlavorSet()) {
             sharedViewModel.setFlavor(getString(R.string.vanilla))
         }
+
+        //tetapkan rasa "fruits" sebagai rasa default jika tidak ada rasa yang dipilih
+        if (sharedViewModel.hasNoToppingSet()) {
+            sharedViewModel.setTopping(getString(R.string.fruits))
+        }
     }
 
     /**

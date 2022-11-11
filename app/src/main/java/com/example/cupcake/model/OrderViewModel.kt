@@ -28,6 +28,10 @@ class OrderViewModel : ViewModel() {
     private val _flavor = MutableLiveData<String>()
     val flavor: LiveData<String> = _flavor
 
+    //data untuk topping
+    private val _topping = MutableLiveData<String>()
+    val topping: LiveData<String> = _topping
+
     //data untuk date
     private val _date = MutableLiveData<String>()
     val date: LiveData<String> = _date
@@ -52,6 +56,11 @@ class OrderViewModel : ViewModel() {
         _flavor.value = desiredFlavor
     }
 
+    //method untuk topping
+    fun setTopping(desiredTopping: String) {
+        _topping.value = desiredTopping
+    }
+
     //method untuk pickup date
     fun setDate(pickupDate: String) {
         _date.value = pickupDate
@@ -63,6 +72,11 @@ class OrderViewModel : ViewModel() {
     //method untuk apakah flavor telah ditetapkan atau belum
     fun hasNoFlavorSet(): Boolean {
         return _flavor.value.isNullOrEmpty()
+    }
+
+    //method untuk apakah topping telah ditetapkan atau belum
+    fun hasNoToppingSet(): Boolean {
+        return _topping.value.isNullOrEmpty()
     }
 
     //fungsi untuk menampilkan daftar tanggal
@@ -86,6 +100,7 @@ class OrderViewModel : ViewModel() {
     fun resetOrder() {
         _quantity.value = 0
         _flavor.value = ""
+        _topping.value = ""
         _date.value = dateOptions[0]
         _price.value = 0.0
     }
@@ -106,5 +121,4 @@ class OrderViewModel : ViewModel() {
         }
         _price.value = calculatedPrice
     }
-
 }

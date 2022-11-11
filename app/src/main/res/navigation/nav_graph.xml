@@ -30,14 +30,25 @@
             app:destination="@id/flavorFragment" />
     </fragment>
 
-<!--    Fragment untuk memilih rasa cupcale-->
+<!--    Fragment untuk memilih rasa cupcake-->
     <fragment
         android:id="@+id/flavorFragment"
         android:name="com.example.cupcake.FlavorFragment"
         android:label="@string/choose_flavor"
         tools:layout="@layout/fragment_flavor" >
         <action
-            android:id="@+id/action_flavorFragment_to_pickupFragment"
+            android:id="@+id/action_flavorFragment_to_toppingFragment"
+            app:destination="@id/toppingFragment" />
+    </fragment>
+
+<!--    Fragment untuk memilih topping-->
+    <fragment
+        android:id="@+id/toppingFragment"
+        android:name="com.example.cupcake.ToppingFragment"
+        android:label="@string/choose_topping"
+        tools:layout="@layout/fragment_topping">
+        <action
+            android:id="@+id/action_toppingFragment_to_pickupFragment"
             app:destination="@id/pickupFragment" />
     </fragment>
 
@@ -58,4 +69,5 @@
         android:name="com.example.cupcake.SummaryFragment"
         android:label="@string/order_summary"
         tools:layout="@layout/fragment_summary" />
+
 </navigation>

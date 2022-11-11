@@ -47,6 +47,7 @@
                 android:focusable="true"
                 android:orientation="vertical">
 
+                <!--Menampilkan ringkasan quantity pesanan cupcake-->
                 <TextView
                     android:id="@+id/quantity_label"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
@@ -56,7 +57,6 @@
                     android:textAllCaps="true"
                     android:textStyle="normal" />
 
-<!--                Menampilkan ringkasan quantity pesanan cupcake-->
                 <TextView
                     android:id="@+id/quantity"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
@@ -66,6 +66,7 @@
                     tools:text="6 cupcakes"
                     android:text="@{viewModel.quantity.toString()}" />
 
+<!--                garis horizontal 1-->
                 <View
                     android:id="@+id/divider1"
                     style="@style/Widget.Cupcake.Divider"
@@ -74,13 +75,14 @@
                     android:layout_marginTop="@dimen/side_margin"
                     android:layout_marginBottom="@dimen/side_margin" />
 
+                <!--Menampilkan ringkasan flavor pesanan cupcake-->
                 <TextView
                     android:id="@+id/flavor_label"
                     style="@style/Widget.Cupcake.TextView.Label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/flavor" />
-                <!--Menampilkan ringkasan flavor pesanan cupcake-->
+
                 <TextView
                     android:id="@+id/flavor"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
@@ -90,6 +92,7 @@
                     tools:text="Chocolate"
                     android:text="@{viewModel.flavor}" />
 
+                <!--garis horizontal 2-->
                 <View
                     android:id="@+id/divider2"
                     style="@style/Widget.Cupcake.Divider"
@@ -98,6 +101,33 @@
                     android:layout_marginTop="@dimen/side_margin"
                     android:layout_marginBottom="@dimen/side_margin" />
 
+                <!--Menampilkan ringkasan topping pesanan cupcake-->
+                <TextView
+                    android:id="@+id/topping_label"
+                    style="@style/Widget.Cupcake.TextView.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/topping" />
+
+                <TextView
+                    android:id="@+id/topping"
+                    style="@style/Widget.Cupcake.TextView.OrderSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/order_summary_margin"
+                    tools:text="Fruits"
+                    android:text="@{viewModel.topping}" />
+
+                <!--garis horizontal 3-->
+                <View
+                    android:id="@+id/divider3"
+                    style="@style/Widget.Cupcake.Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/side_margin"
+                    android:layout_marginBottom="@dimen/side_margin" />
+
+                <!--Menampilkan ringkasan date pesanan cupcake-->
                 <TextView
                     android:id="@+id/pickup_label"
                     style="@style/Widget.Cupcake.TextView.Label"
@@ -105,7 +135,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pickup_date" />
 
-                <!--Menampilkan ringkasan date pesanan cupcake-->
                 <TextView
                     android:id="@+id/date"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
@@ -115,14 +144,16 @@
                     tools:text="Sunday"
                     android:text="@{viewModel.date}" />
 
+                <!--garis horizontal 4-->
                 <View
-                    android:id="@+id/divider3"
+                    android:id="@+id/divider4"
                     style="@style/Widget.Cupcake.Divider"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/side_margin"
                     android:layout_marginBottom="@dimen/margin_between_elements" />
 
+<!--                Total pemesanan-->
                 <TextView
                     android:id="@+id/total"
                     style="@style/Widget.Cupcake.TextView.FinalPrice"
