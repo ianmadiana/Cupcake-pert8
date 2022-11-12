@@ -9,9 +9,9 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 //menentukan harga per cupcake dideklarisikan sebagai konstanta (nilai tidak berubah)
-private const val PRICE_PER_CUPCAKE = 2.00
+private const val PRICE_PER_CUPCAKE = 10000.00
 //menentukan harga per cupcake jika diambil di hari yang sama, variabel ditentukan sebagai konstanta (nilai tidak berubah)
-private const val PRICE_FOR_SAME_DAY_PICKUP = 3.00
+private const val PRICE_FOR_SAME_DAY_PICKUP = 3000.00
 
 //class ini digunakan untuk menyimpan data aplikasi
 class OrderViewModel : ViewModel() {
@@ -83,7 +83,7 @@ class OrderViewModel : ViewModel() {
     private fun getPickupOptions(): List<String> {
         val options = mutableListOf<String>()
 
-        val formatter = SimpleDateFormat("E MMM d", Locale.getDefault())
+        val formatter = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
 
         val calendar = Calendar.getInstance()
 
@@ -92,7 +92,6 @@ class OrderViewModel : ViewModel() {
             options.add(formatter.format(calendar.time))
             calendar.add(Calendar.DATE, 1)
         }
-
         return options
     }
 
