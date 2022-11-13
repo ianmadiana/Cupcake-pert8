@@ -59,6 +59,7 @@ class FlavorFragment : Fragment() {
 
         //mengikat viewModel dengan sharedViewModel
         binding?.apply {
+//            Mengamati LiveData pada aplikasi
             //siklus proses agar data dapat diamati
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel

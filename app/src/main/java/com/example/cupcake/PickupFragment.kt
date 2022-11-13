@@ -57,6 +57,7 @@ class PickupFragment : Fragment() {
 
         //mengikat viewModel dengan sharedViewModel
         binding?.apply {
+            //Mengamati LiveData pada aplikasi
             viewModel = sharedViewModel
             //siklus proses agar data dapat diamati
             lifecycleOwner = viewLifecycleOwner

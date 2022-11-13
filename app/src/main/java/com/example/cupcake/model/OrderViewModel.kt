@@ -15,6 +15,7 @@ private const val PRICE_FOR_SAME_DAY_PICKUP = 3.0
 
 //class ini digunakan untuk menyimpan data aplikasi
 class OrderViewModel : ViewModel() {
+//    Live data pada aplikasi, harga akan berubah ketika memiilih tanggal pemesanan
 
     //inisialisasi menggunakan metode getPickupOptions()
     val dateOptions = getPickupOptions()
