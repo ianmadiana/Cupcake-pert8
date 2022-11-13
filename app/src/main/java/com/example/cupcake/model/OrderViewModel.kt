@@ -9,9 +9,9 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 //menentukan harga per cupcake dideklarisikan sebagai konstanta (nilai tidak berubah)
-private const val PRICE_PER_CUPCAKE = 10000.00
+private const val PRICE_PER_CUPCAKE = 2.0
 //menentukan harga per cupcake jika diambil di hari yang sama, variabel ditentukan sebagai konstanta (nilai tidak berubah)
-private const val PRICE_FOR_SAME_DAY_PICKUP = 3000.00
+private const val PRICE_FOR_SAME_DAY_PICKUP = 3.0
 
 //class ini digunakan untuk menyimpan data aplikasi
 class OrderViewModel : ViewModel() {
@@ -36,8 +36,13 @@ class OrderViewModel : ViewModel() {
     private val _date = MutableLiveData<String>()
     val date: LiveData<String> = _date
 
+    //data untuk address
+    private val _address = MutableLiveData<String>()
+    val address: LiveData<String> = _address
+
     //data untuk price
     private val _price = MutableLiveData<Double>()
+
     //Transformations.map()
     val price: LiveData<String> = Transformations.map(_price) {
         NumberFormat.getCurrencyInstance().format(it)
@@ -64,7 +69,6 @@ class OrderViewModel : ViewModel() {
     //method untuk pickup date
     fun setDate(pickupDate: String) {
         _date.value = pickupDate
-
         //memanggil method helper updatePrice()
         updatePrice()
     }
@@ -118,6 +122,7 @@ class OrderViewModel : ViewModel() {
         if (dateOptions[0] == _date.value) {
             calculatedPrice += PRICE_FOR_SAME_DAY_PICKUP
         }
+        //kalkulasi harga
         _price.value = calculatedPrice
     }
 }

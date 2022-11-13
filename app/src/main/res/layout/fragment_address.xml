@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/address"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    android:background="@drawable/image"
+    tools:context=".AddressFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="412dp"
+        android:layout_height="352dp"
+        android:layout_marginBottom="124dp"
+        android:scaleType="center"
+        android:src="@drawable/bakery"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        tools:ignore="MissingConstraints" />
+
+<!--    Menampilkan alamat toko yang datanya diambil dari strings.xml-->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="398dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:background="#97000000"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/text_address"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

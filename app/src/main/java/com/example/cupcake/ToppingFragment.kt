@@ -62,17 +62,16 @@ class ToppingFragment : Fragment() {
             viewModel = sharedViewModel
             //blok kode di bawah berhubungan dengan layout pada onClick
             toppingFragment = this@ToppingFragment
-
-
         }
     }
 
     /**
      * Navigate to the next screen to choose pickup date.
      */
+    //fungsi untuk berpindah antar fragment
     fun goToNextScreen() {
-        //ketika user memilih rasa untuk cupcake
-        //maka akan dinavigasikan ke pickup fragment
+        //ketika user memilih topping untuk cupcake
+        //maka akan dinavigasikan ke pickup date fragment
         findNavController().navigate(R.id.action_toppingFragment_to_pickupFragment)
     }
 

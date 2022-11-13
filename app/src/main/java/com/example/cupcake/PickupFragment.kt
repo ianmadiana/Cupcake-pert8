@@ -68,6 +68,7 @@ class PickupFragment : Fragment() {
     /**
      * Navigate to the next screen to see the order summary.
      */
+//    fungsi untuk berpindah antar fragment
     fun goToNextScreen() {
         //ketika user telah menentukan waktu pickup
         //maka user akan dinavigasikan ke fragment ringkasan pemesanan

@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_startFragment_to_flavorFragment"
             app:destination="@id/flavorFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
     </fragment>
 
 <!--    Fragment untuk memilih rasa cupcake-->
@@ -69,5 +72,12 @@
         android:name="com.example.cupcake.SummaryFragment"
         android:label="@string/order_summary"
         tools:layout="@layout/fragment_summary" />
+
+<!--    Frgament untuk alamat/address-->
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.example.cupcake.AddressFragment"
+        android:label="@string/address"
+        tools:layout="@layout/fragment_address" />
 
 </navigation>

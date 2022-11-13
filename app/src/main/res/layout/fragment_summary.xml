@@ -166,6 +166,7 @@
 
             </LinearLayout>
 
+<!--            Button akan memanggil fungsi sendOrder()-->
             <Button
                 android:id="@+id/send_button"
                 android:onClick="@{() -> summaryFragment.sendOrder()}"

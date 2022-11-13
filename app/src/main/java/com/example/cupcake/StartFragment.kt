@@ -51,8 +51,13 @@ class StartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //mengikat variabel data baru ke instance fragmen
+        //mengikat variabel data baru ke instance fragment
         binding?.startFragment = this
+    }
+
+    //function untuk button Address dan mengarahkan ke fragment address
+    fun address() {
+        findNavController().navigate(R.id.action_startFragment_to_addressFragment)
     }
 
     /**
@@ -71,7 +76,7 @@ class StartFragment : Fragment() {
             sharedViewModel.setFlavor(getString(R.string.vanilla))
         }
 
-        //tetapkan rasa "fruits" sebagai rasa default jika tidak ada rasa yang dipilih
+        //tetapkan "fruits" sebagai toppinf default jika tidak ada topping yang dipilih
         if (sharedViewModel.hasNoToppingSet()) {
             sharedViewModel.setTopping(getString(R.string.fruits))
         }

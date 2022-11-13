@@ -68,6 +68,7 @@ class SummaryFragment : Fragment() {
     /**
      * Submit the order by sharing out the order details to another app via an implicit intent.
      */
+    //fungsi ketika send_button diklik maka akan menampilkan toast "Send Order
     fun sendOrder() {
         Toast.makeText(activity, "Send Order", Toast.LENGTH_SHORT).show()
     }
